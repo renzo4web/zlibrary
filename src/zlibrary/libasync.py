@@ -302,7 +302,8 @@ class AsyncZlib:
         if not dom:
             raise NoDomainError
 
-        self.domain = "https://%s" % dom.text.strip()
+        self.domain = "%s" % dom.text.strip()
+        
         logger.debug("Set working domain: %s" % self.domain)
 
         if no_semaphore:
